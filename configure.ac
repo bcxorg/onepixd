@@ -10,9 +10,9 @@ dnl Process this file with autoconf to produce a configure script
 # @start1
 
 
-AC_INIT(onepixd, [1.0.4], [onepixd@bcx.com])
+AC_INIT(onepixd, [1.1], [onepixd@bcx.com])
 AC_COPYRIGHT([Copyright (c) 2010 Bryan Costales])
-AC_REVISION([1.0.4])
+AC_REVISION([1.1])
 
 CPPFLAGS="$CPPFLAGS -I."
 
@@ -43,7 +43,7 @@ AC_CONFIG_SRCDIR(.)
 AC_CONFIG_AUX_DIR(build)
 AC_CANONICAL_SYSTEM
 AC_PROG_MAKE_SET
-AM_INIT_AUTOMAKE(onepixd, [1.0.4])
+AM_INIT_AUTOMAKE(onepixd, [1.1])
 
 AC_PROG_CC(gcc cc)
 AM_CONFIG_HEADER(config.h)
@@ -213,6 +213,6 @@ then
 	CFLAGS="`echo $CFLAGS | sed -e 's/-pthread//'`"
 fi
 
-AC_OUTPUT([ Makefile libtpool/Makefile ],
+AC_OUTPUT([ Makefile libtpool/Makefile tests/Makefile ],
 [test -z "$CONFIG_HEADERS" || echo timestamp > stamp-h.in])
 # @end1

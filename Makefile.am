@@ -22,10 +22,10 @@ AUX_DIST	= $(auxdir)/install-sh $(auxdir)/missing \
 		  $(auxdir)/config.guess $(auxdir)/build \
 		  $(auxdir)/dh.m4
 
-EXTRA_DIST	= tests/test_gif_requests.html tests/test_join_post_upload.html \
-		  favicon.ico libtpool/tpool.h onepixd.h onepixd.conf makekey.sh \
-		  README tools/Makefile tools/runtest.sh tools/sign_get_function.c \
-		  tools/sign_get_function.php run.sh docs/Onepixd_Manual.pdf
+EXTRA_DIST	= favicon.ico libtpool libtpool/tpool.h onepixd.h onepixd.conf makekey.sh \
+		  README tools tools/Makefile tools/runtest.sh tools/sign_get_function.c \
+		  tools/sign_get_function.php run.sh docs docs/Onepixd_Manual.pdf \
+		  tests tests/test_gif_requests.html tests/test_join_post_upload.html
 
 AUTOMAKE_OPTIONS 	= foreign
 MAINTAINERCLEANFILES 	= Makefile.in aclocal.m4 configure \
@@ -34,6 +34,8 @@ MAINTAINERCLEANFILES 	= Makefile.in aclocal.m4 configure \
 ACLOCAL		= aclocal -I $(auxdir)
 
 dist-hook:	
+		[ -d $(distdir)/libtpool/.deps ] && rm -r $(distdir)/libtpool/.deps
+		rm -f $(distdir)/libtpool/*.o $(distdir)/libtpool/libtpool.a
 
 install-exec-local:
 

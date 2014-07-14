@@ -22,7 +22,19 @@
 *.x86_64
 *.hex
 
-onepixd-*
+.deps
+config.h
+config.log
+config.status
 Makefile.in
 Makefile
 tags
+autom4te.cache
+config.h.in~
+stamp-h.in
+stamp-h1
+onepixd
+libtpool/.deps
+docs/one.raw.jpg
+docs/Onepixd_Manual.fm
+docs/Onepixd_Manual.backup.fm
