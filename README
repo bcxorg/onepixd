@@ -1,0 +1,5 @@
+The onepixd daemon runs in the background and delivers one pixel gifs to
+properly formed html GET requests. The onepixd daemon is entirely configuration
+file driven.
+
+See docs/Onepixd_Manual.pdf
